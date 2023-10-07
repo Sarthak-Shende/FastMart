@@ -1,10 +1,10 @@
 import React from 'react';
-import ProductList from './features/Product_list/productList';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <ProductList></ProductList>
+      <Home></Home>
     </div>
   );
 }
