@@ -1,12 +1,12 @@
 import Navbar from "../features/Navbar/Navbar";
-import ProductList from "../features/Product_list/productList";
+import ProductDetails from "../features/Product/components/productDetails";
 
-function Home() {
+function ProductDetailsPage() {
   return (
     <Navbar>
-      <ProductList></ProductList>
+      <ProductDetails></ProductDetails>
     </Navbar>
   );
 }
 
-export default Home;
+export default ProductDetailsPage;

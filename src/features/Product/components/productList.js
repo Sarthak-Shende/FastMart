@@ -6,7 +6,7 @@ import {
   incrementAsync,
 
   selectCount,
-} from './productListSlice';
+} from '../productSlice';
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
