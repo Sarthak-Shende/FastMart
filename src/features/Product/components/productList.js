@@ -21,7 +21,12 @@
       const newFilter = { ...filter, [section.id]: option.value };
       setFilter(newFilter);
       dispatch(fetchProductsByFilterAsync(newFilter));
-      console.log(section.id, option.value);
+    };
+
+    const handleSort = (e,option) => {
+      const newFilter = { ...filter, _sort:option.sort, _order:option.order };
+      setFilter(newFilter);
+      dispatch(fetchProductsByFilterAsync(newFilter));
     };
 
     useEffect(() => {
@@ -395,7 +400,7 @@
                           <Menu.Item key={option.name}>
                             {({ active }) => (
                               <p
-                                onClick={(e) => console.log(option)}
+                                onClick={(e) => handleSort(e,option)}
                                 className={classNames(
                                   option.current
                                     ? "font-medium text-gray-900"
@@ -527,13 +532,13 @@
                                 <div className="mt-4 flex justify-between">
                                   <div>
                                     <h3 className="text-sm text-gray-700">
-                                      <a href={product.thumbnail}>
+                                      <div href={product.thumbnail}>
                                         <span
                                           aria-hidden="true"
                                           className="absolute inset-0"
                                         />
                                         {product.title}
-                                      </a>
+                                      </div>
                                     </h3>
                                     <p className="mt-1 text-sm text-gray-500">
                                       <StarIcon className="w-6 h-6 inline"></StarIcon>
