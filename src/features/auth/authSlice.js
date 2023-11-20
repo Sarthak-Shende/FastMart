@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const createUserAsync = createAsyncThunk(
-  'user/createUser',
+  'auth/createUser',
   async (userData) => {
     const response = await createUser(userData);
     return response.data;
@@ -16,7 +16,7 @@ export const createUserAsync = createAsyncThunk(
 );
 
 export const checkUserAsync = createAsyncThunk(
-  "user/checkUser",
+  "auth/checkUser",
   async (loginInfo) => {
     const response = await checkUser(loginInfo);
     return response.data;
@@ -24,7 +24,7 @@ export const checkUserAsync = createAsyncThunk(
 );
 
 export const counterSlice = createSlice({
-  name: 'user',
+  name: 'auth',
   initialState,
   reducers: {
     increment: (state) => {
